@@ -1,0 +1,577 @@
+@font-face{
+    font-family: Halvetica;
+    src: url(../fonts/Helvetica-Neue-Font/Helvetica\ Neue\ LT\ 45\ Light.woff);
+}
+html{
+    scroll-behavior: smooth;
+    text-decoration: none;
+    font-family: Halvetica;
+}
+
+header{
+    position: relative;
+}
+
+.header-bg{
+    background-color: rgb(25,45,80);
+    border-bottom: 8px solid rgb(50,134,161);
+}
+
+.navbar{
+    padding: 0 !important;
+}
+
+.nav-container{
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+    height: 102px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.nav-container ul{
+    /* display: flex; */
+    font-size: 15px;
+    align-items: center;
+    margin-bottom: 0 !important;
+}
+
+.nav-item{
+    margin-right: 2.5rem;
+}
+
+.nav-container li:nth-child(5){
+    /* background-color:rgb(50,134,161) ; */
+    padding: 0.8rem;
+    margin-right: 0;
+}
+
+.nav-container li a, a.button-link{
+    text-decoration: none;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+.navbar-nav .dropdown-menu{
+    color: white;
+    background-color:rgb(50,134,161) !important;
+}
+
+.dropdown-item:hover{
+    background-color: rgb(25,45,80) !important;
+}
+
+.offcanvas-end{
+    background-color:rgb(25,45,80) !important ;
+}
+
+.navbar-light .navbar-toggler {
+    color: rgb(50,134,161) !important;
+    border-color: rgb(50,134,161)!important;
+}
+
+.navbar-toggler{
+    border: 2px solid transparent !important;
+    background-color:rgb(25,45,80) !important;
+}
+
+.tamandare-icon{
+    background-image: linear-gradient(rgb(50,134,161),rgb(25,45,80));
+    width: fit-content;
+    padding: 1.15rem 1.35rem;
+    position: absolute;
+    top: 0px;
+    left: 20%;
+    z-index: 1000;
+}
+
+.banner{
+    position: relative;
+}
+
+.banner img{
+    width: 100%;
+}
+
+.banner-icon{
+    position: absolute;
+    top: 40%;
+    right: 50%;
+    transform: translate(50%,-50%);
+}
+
+.banner-icon img{
+    width: 12.5rem;
+    height: 12.5rem;
+}
+
+.comprar-btn{
+    background-image: linear-gradient(rgb(177,24,93),rgb(255,154,29));
+    padding: 2rem 0;
+}
+
+.comprar-btn button{
+    width: 60%;
+    text-align: center;
+    background-color: rgb(25,45,80);
+    border-radius: 16px;
+}
+
+/* .banner button{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color:rgb(255,154,29);
+    border: 0px;
+    color: white;
+    padding: 0.8rem 0rem;
+    width: 40%;
+} */
+
+.cronograma-bg{
+    background-color:rgb(25,45,80) ;
+    width: 100%;
+    height: 250px;
+    margin-top: -5px;
+}
+
+.cronograma-container{
+    position: relative;
+    top: -150px;
+}
+.cronograma{
+    width: 35%;
+    height: 18.3rem;
+    margin: 0 auto;
+    display: flex
+}
+
+.cronograma-d{
+    background-color:rgb(255,154,29);
+    width: 100%;
+}
+
+.cronograma-d div{
+    background-color:#F6D313 ;
+    width: 100%;
+    height: 70px;
+    color: white;
+    font-weight: bold;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    padding-left: 0.8rem;
+    box-sizing: border-box;
+}
+
+.data{
+    margin-left: 1rem;
+    font-size: 1.438rem;
+}
+
+.atracoes{
+    color: white;
+    font-size: 1.313rem;
+    line-height: 2.375rem;
+    padding-left: 1.8rem;
+    padding-top: 1.5rem;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+.cronograma-e{
+    background-color:rgb(25,45,80);
+    width: 100%;
+}
+
+.cronograma-e div{
+    background-color: rgb(50,134,161);
+    width: 100%;
+    height: 70px;
+    color: white;
+    font-weight: bold;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    padding-left: 0.8rem;
+    box-sizing: border-box;
+}
+
+.cronograma-bg button{
+    width: 35%;
+    margin: 0 auto;
+    display: flex;
+    font-size: 1.563rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: rgb(177,24,93);
+    border: 0px;
+    justify-content: center;
+    padding: 0.8rem 0;
+}
+
+.form-bg{
+    background-color: rgb(255,154,29);
+    width: 100%;
+    padding-bottom: 1.8rem ;
+}
+
+.cadastro{
+    width: 60%;
+    margin: 0 auto;
+    background-color: rgb(177,24,93);
+    color:white;
+    font-size: 1.563rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 1.5rem 0;
+    border-radius: 16px;
+}
+
+.cadastro-detalhe{
+    width: 26.88px;
+    height: 26.88px;
+    background-color: rgb(177,24,93);
+    text-align: center;
+    transform: rotate(45deg);
+    margin: -15px auto
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 1.8rem auto;
+}
+
+form input{
+    background-color: rgb(25,45,80);
+    border: 1px solid rgb(177,24,93);
+    margin-bottom: 1rem;
+    padding: 1.5rem 0.8rem;
+    color: white;
+}
+
+.form-button{
+    background-color: rgb(177,24,93);
+    color: #F7D10F;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    font-size: 1.563rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border: 0px;
+    justify-content: center;
+    padding: 0.8rem 0;
+    
+}
+
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+::placeholder{
+    color: white;
+}
+
+.insta-fixo{
+    position: fixed;
+    z-index: 999999;
+    bottom: 33px;
+    right: 15px;
+    background-color: rgb(50,134,161);
+    border-radius: 10px;
+    padding: 0.3rem;
+    /* width: px; */
+}
+
+.mapa{
+    width: 45%;
+    margin: 0 auto;
+    background-color: rgb(255,251,75);
+    color:white;
+    font-size: 1.563rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 1.5rem 0;
+}
+
+.mapa-detalhe{
+    width: 26.88px;
+    height: 26.88px;
+    background-color: rgb(255,251,75);
+    text-align: center;
+    transform: rotate(45deg);
+    margin: -15px auto
+}
+
+/* Modal pedido */
+
+.modal-header{
+    border-bottom: 1px solid rgb(25,45,80) !important;
+    color: white !important;
+    text-align: center !important;
+}
+
+.modal-content{
+    background-color: rgb(50,134,161) !important;
+}
+
+.modal-footer{
+    border-top: 1px solid rgb(25,45,80) !important;
+}
+
+.modal-footer .btn{
+    background-color: rgb(177,24,93) !important;
+}
+
+/* Modal evento */
+
+.modal-header-evento{
+    border-bottom: 1px solid rgb(50,134,161) !important;
+}
+
+.modal-body-evento input{
+    background-color: rgb(50,134,161) !important;
+}
+
+.modal-content-evento{
+    background-color: rgb(25,45,80) !important;
+}
+
+.modal-footer-evento{
+    border-top: 1px solid rgb(50,134,161) !important;
+}
+
+.form-button-evento{
+    background-color: rgb(177,24,93) !important;
+}
+
+.modal-footer .btn-evento{
+    background-color: rgb(177,24,93) !important;
+}
+
+
+.modal-body form{
+    width: 90%;
+}
+
+/* Toast */
+
+.sucesso-header{ 
+    background-color: green !important;
+    color: white !important;
+    border-bottom: 0px !important
+}
+
+.sucesso-footer{
+    background-color: rgb(11, 161, 11)  !important;
+    color: white !important;
+}
+
+.fracasso-header{ 
+    background-color: rgb(194, 3, 3) !important;
+    color: white !important;
+    border-bottom: 0px !important
+}
+
+.fracasso-footer{
+    background-color: red  !important;
+    color: white !important;
+}
+
+@media only screen and (max-width: 1024px) {
+    .banner-icon{
+        top: 35%;
+    }
+
+    .banner-icon img{
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .tamandare-icon{
+        left: 10%;
+       
+       
+    }
+
+    .cronograma, .cronograma-bg button{
+        width: 60%;
+    }
+
+    .cronograma-d div, .cronograma-e div{
+        height: 100px;
+    }
+
+
+}
+
+@media only screen and (max-width: 992px) {
+    .nav-container ul{
+        align-items: flex-start;
+        line-height: 2rem;
+    }
+
+    .navbar-light .navbar-nav .nav-link{
+        padding: 0;
+    }
+
+    .navbar-nav .dropdown-menu{
+        margin-bottom: 8px !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    
+    .nav-container{
+        width: 60%;
+    }
+   
+
+    .tamandare-icon{
+        left: 20%;
+    }
+    
+    
+    .banner-icon{
+        top: 50%;
+    }
+
+    .banner-icon img{
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .cronograma-container{
+        top: -115px;
+    }
+
+    .cronograma, .cronograma-bg button, .cadastro, form{
+        width: 80%;
+    }
+
+    /* .cronograma-bg button{
+        width: 80%;
+    }
+
+    .cadastro, form input, {
+        width: 80%;
+    } */
+
+    .cronograma-bg{
+        height: auto;
+        padding: 1rem 0;
+    }
+    
+    .cronograma-container{
+        top: 0px;
+    }
+
+    .cronograma{
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+
+    .cronograma-d, .cronograma-e{
+        padding-bottom: 5%;
+    }
+
+    .cronograma-bg button{
+        width: 100%;
+    }
+
+    .cadastro{
+        width: 80%;
+    }
+
+    .comprar-btn{
+        padding: 1rem;
+    }
+    
+    .comprar-btn button{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 625px) {
+    .nav-container{
+        width: 80%;
+        /* justify-content: center; */
+    }
+
+    .nav-container li:nth-child(3){
+        margin-right: 0;
+    }
+
+    .tamandare-icon{
+       left: 10%;
+    }
+
+    .banner-icon {
+        top: 50%;
+    }
+
+    .banner-icon img{
+        width: 7rem;
+        height: 7rem;
+    }
+
+    /* .cronograma-bg{
+        height: auto;
+        padding: 1rem 0;
+    }
+    
+    .cronograma-container{
+        top: 0px;
+    }
+
+    .cronograma{
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+
+    .cronograma-d, .cronograma-e{
+        padding-bottom: 5%;
+    }
+
+    .cronograma-bg button{
+        width: 100%;
+    }
+
+    .cadastro{
+        width: 80%;
+    } */
+
+    .comprar-btn button{
+        width: 100%;
+    }
+}
+
+

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/icon.balon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <title>Galo Paradise</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZKBN199JX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7ZKBN199JX');
+    </script>
+
+</head>
+
+<?php
+session_start();
+?>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light  header-bg navbar-expand-lg">
+            <div class="nav-container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="img/icon.balon.svg" width="40%"></h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a target="_black" href="https://www.evenyx.com/sao-joao-de-patos">COMPRAR INGRESSO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#form">NOVIDADES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#form" data-bs-toggle="modal" data-bs-target="#menores">MENORES DE 18</a>
+                            </li>
+                            <!-- <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    DÚVIDAS
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#pedidos">PEDIDOS</a></li>
+                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#evento">EVENTO</a></li>
+                                </ul>
+                            </li> -->
+                            <li class="nav-item">
+                                <a target="_black" href="https://www.instagram.com/galoparadise/"><img src="img/eYx8cP.tif.png"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="tamandare-icon">
+            <img src="img/icon.balon.png">
+        </div>
+    </header>
+    <div class="banner">
+        <img src="img/header.svg.svg">
+        <!-- <div class="banner-icon">
+            <img src="./img/Grupo4.png">
+        </div> -->
+    </div>
+    <div class="comprar-btn">
+        <a target="_blanck" href="https://vendas.galoparadise.com/">
+            <button class="form-button">COMPRAR INGRESSO    
+            </button>
+        </a>
+    </div>
+
+    <img width="100%" src="img/footer.svg.svg" alt="" srcset="">
+
+    <div class="form-bg" id="form">
+        <br>
+        <br>
+        <div class="cadastro">
+            RECEBA NOVIDADES
+        </div>
+        <div class="cadastro-detalhe"></div>
+        <form action="save.php" method="POST">
+            <?php
+            if (isset($_SESSION["success"])) {
+                echo    '<div class="alert alert-success" role="alert">
+                                ' . $_SESSION["success"] . '
+                            </div>';
+                $_SESSION["success"] = null;
+            }
+            if (isset($_SESSION["name"])) {
+                echo    '<div class="alert alert-danger" role="alert">
+                                ' . $_SESSION["name"] . '
+                            </div>';
+                $_SESSION["name"] = null;
+            }
+            if (isset($_SESSION["error"])) {
+                echo    '<div class="alert alert-danger" role="alert">
+                                ' . $_SESSION["error"] . '
+                            </div>';
+                $_SESSION["error"] = null;
+            }
+            ?>
+            <input type="text" name="name" placeholder="NOME" required>
+            <?php
+            if (isset($_SESSION["email"])) {
+                echo    '<div class="alert alert-danger" role="alert">
+                                ' . $_SESSION["email"] . '
+                            </div>';
+                $_SESSION["email"] = null;
+            }
+            ?>
+            <input type="email" name="email" placeholder="EMAIL" required>
+            <input type="text" name="insta" placeholder="INSTAGRAM @MEUPREFIL">
+            <input type="text" id="phone" name="phone" placeholder="TELEFONE">
+            <button type="submit" class="form-button">Enviar</button>
+        </form>
+    </div>
+    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3707.2896642670357!2d-35.098545585394746!3d-8.740052793721619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwNDQnMjQuMiJTIDM1wrAwNSc0Ni45Ilc!5e1!3m2!1spt-BR!2sbr!4v1633469010706!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+
+    <script src="./js/plugins/jquery/jquery.js"></script>
+    <script src="./js/plugins/jquery-mask/jquery.mask.js"></script>
+    <script>
+        $('#phone').mask('(00) 00000-0000');
+    </script>
+
+    <!-- Modal pedidos-->
+    <div class="modal fade" id="pedidos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">DÚVIDAS SOBRE OS SEUS PEDIDOS</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="mail-pedidos.php" method="POST">
+                        <input type="text" name="name" placeholder="NOME">
+                        <input type="email" name="email" placeholder="EMAIL" require>
+                        <input type="text" name="duvida" placeholder="DIGITE SUA DÚVIDA SOBRE OS SEUS PEDIDOS" require>
+                        <button type="submit" class="form-button">Enviar</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">FECHAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal evento-->
+    <div class="modal fade" id="evento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal-content-evento">
+                <div class="modal-header modal-header-evento">
+                    <h5 class="modal-title" id="exampleModalLabel">DÚVIDAS SOBRE O EVENTO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body modal-body-evento">
+                    <form action="mail-evento.php" method="POST">
+                        <input type="text" name="name" placeholder="NOME">
+                        <input type="email" name="email" placeholder="EMAIL" required>
+                        <input type="text" name="duvida" placeholder="DIGITE SUA DÚVIDA SOBRE O EVENTO" required>
+                        <button type="submit" class="form-button form-button-evento">Enviar</button>
+                    </form>
+                </div>
+                <div class="modal-footer modal-footer-evento">
+                    <button type="button" class="btn btn-secondary btn-evento" data-bs-dismiss="modal">FECHAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Menores de 18-->
+    <div class="modal fade" id="menores" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">INFORMACOES IMPORTANTE SOBRE MENOR EM EVENTOS</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p class="text-white fw-bold">12 a 14 anos (sem ser open bar): Declaracão dos pais, em cartório, delegando poder para um maior ser o responsável por ele. Não sendo necessário ser parente e esse maior tem que está acompanhando o menor.</p>
+                    <p class="text-white fw-bold">15 a 17 anos (sem ser open bar): Declaracão dos pais, em cartório, delegando poder para um maior ser o responsável por ele. Não sendo necessário ser parente e nem o maior estar presente.</p>
+                    <button class="form-button"><a target="_blank" href="pdf/autorizacao-portaria.pdf">Download da Declaracão</a></button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">FECHAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- dúvida erro -->
+    <?php
+    if (isset($_SESSION['erro'])) {
+        echo '
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header ' . $_SESSION['classe'] . '-header">
+                    <strong class="me-auto">Verão Tamandaré</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body ' . $_SESSION['classe'] . '-footer">' .
+            $_SESSION['erro'] .
+            '</div>
+            </div>
+        </div>';
+        $_SESSION['erro'] = null;
+    }
+    ?>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+
+<!-- Tost script -->
+<script>
+    var toastTrigger = document.getElementById('liveToastBtn')
+    var toastLiveExample = document.getElementById('liveToast')
+    var toast = new bootstrap.Toast(toastLiveExample)
+    toast.show()
+</script>
+
+</html>
